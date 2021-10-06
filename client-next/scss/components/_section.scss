@@ -1,0 +1,24 @@
+.section {
+	&:not(:last-child) {
+		margin-bottom: $section-header-gutter * 2;
+	}
+
+	&__header {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-start;
+		align-items: center;
+		margin-bottom: $section-header-gutter;
+	}
+
+	&__title {
+		color: $section-title-color;
+		font-size: $section-title-font-size;
+		margin: 0;
+		padding: 0;
+	}
+
+	&__content {
+		margin-bottom: $spacing-scale-14;
+	}
+}

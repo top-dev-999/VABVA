@@ -1,0 +1,301 @@
+// Custom variables on top of bootstrap's variables
+
+// Font
+$font-family-base: "Poppins", Arial, sans-serif, monospace;
+$font-family-secondary: "Roboto", Arial, sans-serif, monospace;
+$font-size-base: 1.4rem;
+$font-size-medium: 1.6rem;
+$font-size-xmedium: 1.7rem;
+$font-size-large: 2.5rem;
+$font-size-small: 1.2rem;
+$line-height-base: 1.4;
+
+$color-primary: #36b4c4;
+$color-primary-text: darken($color-primary, 5%);
+$color-primary-light: #dff4f6;
+$color-secondary: #ad57a0;
+$color-secondary-text: darken($color-secondary, 5%);
+$color-secondary-light: #f0e5f0;
+$color-secondary-lighten: rgba($color-secondary, 0.04);
+$color-third: #212648;
+$color-third-light: #353857;
+$color-success: #70cb60;
+$color-dark: #222222;
+$color-light: #2c2c2c;
+$color-dimmed: #6d788e;
+$color-dimmed-light: #9ea7b4;
+$color-danger: #ff5555;
+$color-blue: #007bff;
+$color-blue-light: #00a3ff;
+$color-orange: #ffc107;
+$color-green: #28a745;
+
+// Grid / Spacing
+
+$spacer: .8rem;
+
+$spacing-scale-0: 0;
+$spacing-scale-1: $spacer * 0.25; // .2rem
+$spacing-scale-2: $spacer * 0.5; // .4rem
+$spacing-scale-3: $spacer * 0.75; // .6rem
+$spacing-scale-4: $spacer; // .8rem
+$spacing-scale-5: $spacer * 1.25; // 1rem
+$spacing-scale-6: $spacer * 1.5; // 1.2rem
+$spacing-scale-7: $spacer * 1.75; // 1.4rem
+$spacing-scale-8: $spacer * 2; // 1.6rem
+$spacing-scale-9: $spacer * 2.25; // 1.8rem
+$spacing-scale-10: $spacer * 2.5; // 2rem
+$spacing-scale-11: $spacer * 2.75; // 2.2rem
+$spacing-scale-12: $spacer * 3; // 2.4rem
+$spacing-scale-13: $spacer * 3.25; // 2.6rem
+$spacing-scale-14: $spacer * 3.5; // 2.8rem
+$spacing-scale-15: $spacer * 3.75; // 3rem
+$spacing-scale-16: $spacer * 4; // 3.2rem
+$spacing-scale-18: $spacer * 4.5; // 3.6rem
+$spacing-scale-19: $spacer * 4.75; // 3.8rem
+$spacing-scale-20: $spacer * 5; // 3.8rem
+$spacing-scale-24: $spacer * 6; // 4.8rem
+
+$grid-gutter-width: 48px;
+
+// Container
+$container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1218px);
+
+$grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px);
+
+// Border
+$border-width: 1px;
+$border-color-light: #f3f4f4;
+$border-color: #e5e5e5;
+$border-color-dark: #dcdcdc;
+$border-radius-sm: .4rem;
+$border-radius-md: .6rem;
+$border-radius-lg: 1rem;
+$border-radius: $border-radius-lg;
+
+// Body
+$body-bg: #fcfcfc;
+$body-bg-dark: #e5e5e5;
+$body-color: #666666;
+$body-color-dark: #000;
+
+// Custom components
+
+$header-hight: 10.4rem;
+$header-condensed-height: 8.4rem;
+
+// UI components
+
+$icon-color: $body-color;
+
+// Z-index
+$modal-z-index: 2000;
+$popper-z-index: 3000;
+$mask-z-index: 8000;
+$notification-z-index: 9000;
+
+$box-shadow-sm: 0 .2rem .8rem rgba(#000, .085);
+$box-shadow: 0 .5rem 1rem rgba(#000, .15);
+$box-shadow-lg: 0 1rem 3rem rgba(#000, .175);
+
+// Button
+$btn-font-family: $font-family-secondary;
+$btn-color: $color-primary;
+$btn-bg-color: $body-bg;
+$btn-primary-color: #fff;
+$btn-primary-bg-color: $color-primary;
+$btn-secondary-color: #fff;
+$btn-secondary-bg-color: $color-secondary;
+$btn-light-color: $color-dark;
+$btn-light-bg-color: #fff;
+$btn-outline-light-color: $btn-light-bg-color;
+$btn-outline-light-bg-color: transparent;
+$btn-font-size: $font-size-medium;
+$btn-large-font-size: $font-size-xmedium;
+$btn-font-weight: 400;
+$btn-text-letter-spacing: 0;
+$btn-focus-box-shadow: none;
+$btn-hover-opacity: .85;
+$btn-hover-transparent-opacity: .08;
+$btn-border-width: $border-width;
+$btn-padding-y: 1rem;
+$btn-padding-x: 1.75rem;
+$btn-large-padding-y: 1.25rem;
+$btn-large-padding-x: 1.8rem;
+$btn-border-radius: $border-radius-lg;
+$btn-disabled-opacity: .4;
+$btn-min-width: 6rem; // Min width is required to proper work of text truncation
+$btn-transition: all .15s ease;
+
+// Link
+$link-color: inherit;
+$link-decoration: none;
+$link-hover-color: none;
+
+// Checkbox
+$checkbox-margin-x: $spacing-scale-3;
+$checkbox-hover-padding: $spacing-scale-4;
+
+// Helper text
+$helper-text-color: $color-dimmed;
+$helper-text-font-size: $font-size-small;
+$helper-text-font-weight: 400;
+$helper-text-letter-spacing: .3px;
+
+// Input
+$input-bg-color: #fff;
+$input-disabled-bg-color: $body-bg;
+$input-disabled-opacity: .6;
+$input-border-width: 1px;
+$input-border-color: $border-color;
+$input-border-radius: $border-radius-sm;
+$input-padding-y: $spacing-scale-5;
+$input-padding-x: $spacing-scale-8;
+$input-focus-box-shadow: 0 0px 0px .1rem rgba($color-secondary, .8), 0 0px 0 .4rem rgba($color-secondary, .2);
+$input-error-box-shadow: 0 0px 0px .1rem $color-danger;
+$input-focus-stripe-color: rgba($color-secondary, .85);
+$input-placeholder-color: $color-dimmed-light;
+$input-adornment-color: $color-dimmed-light;
+$input-autofill-bg-color: #fff;
+$input-default-width: 22rem;
+$input-transition: box-shadow 0.15s ease;
+
+// Field
+$field-filled-bg-color: $body-bg-dark;
+$field-label-color: $color-light;
+$field-label-font-size: $font-size-base;
+$field-label-line-height: 1.6;
+$field-label-font-weight: 500;
+$field-label-letter-spacing: .3px;
+$field-label-width: 12rem;
+$field-helper-text-color: $helper-text-color;
+$field-helper-text-font-size: $helper-text-font-size;
+$field-helper-text-font-weight: $helper-text-font-weight;
+$field-helper-text-letter-spacing: $helper-text-letter-spacing;
+
+// Section
+$section-title-font-size: 2.2rem;
+$section-title-color: $color-secondary;
+$section-header-gutter: $spacing-scale-8;
+
+// Headings
+
+$h1-font-size: $font-size-base * 2.5;
+$h2-font-size: $font-size-base * 2;
+$h3-font-size: $font-size-base * 1.75;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: 1.8rem;
+$h6-font-size: $font-size-base;
+
+$headings-font-weight: 500;
+$headings-color: $color-dark;
+$headings-color-light: $color-light;
+$headings-line-height: inherit;
+$headings-margin-bottom: $spacing-scale-6;
+
+// Icon button
+$icon-btn-size: 4.4rem;
+
+// Avatar
+$avatar-size: 6rem;
+$avatar-small-size: 4rem;
+$avatar-large-size: 10rem;
+$avatar-text-font-size: 2rem;
+$avatar-small-text-font-size: 1.6rem;
+$avatar-large-text-font-size: 6rem;
+$avatar-bg-color: $color-secondary;
+$avatar-text-color: #fff;
+$avatar-text-font-weight: 600;
+
+// Rating
+$rating-size-small: 1.2rem;
+$rating-size-medium: 1.6rem;
+$rating-size-large: 2.4rem;
+$rating-disabled-opacity: .4;
+
+// Window
+$window-bg-color: #fff;
+$window-box-shadow: 0 .4rem 1.6rem -.1rem rgba(0, 0, 0, 0.25);
+$window-border-radius: $border-radius-lg;
+$window-margin: $grid-gutter-width / 2;
+$window-body-painted-bg-color: $body-bg;
+
+// Mask
+$mask-bg-color: rgba(#fff, .5);
+$mask-title-color: $color-light;
+$mask-title-padding: $spacing-scale-6;
+$mask-title-letter-spacing: .4px;
+$mask-title-font-weight: 700;
+
+// Alerts
+$alert-error-color: $color-danger;
+$alert-warning-color: $color-orange;
+$alert-info-color: $color-blue;
+$alert-success-color: $color-green;
+$alert-padding-x: $spacing-scale-7;
+$alert-padding-y: $spacing-scale-4;
+$alert-border-radius: $border-radius-sm;
+
+// List
+$list-bg-color: #fff;
+$list-padding-x: 0;
+$list-padding-y: $spacing-scale-4;
+$list-item-acitve-bg-color: lighten($color-primary, 35%) !default;
+$list-item-hover-bg-color: rgba(#000, 0.08) !default;
+$list-item-focus-bg-color: rgba(#000, 0.15) !default;
+$list-item-padding-y: $spacing-scale-4;
+$list-item-padding-x: $spacing-scale-7;
+$list-item-text-color: $body-color-dark;
+$list-item-text-padding-y: .25rem;
+$list-item-text-padding-x: 0;
+$list-item-disabled-opacity: .6;
+$list-item-empty-color: $color-dimmed;
+$list-item-empty-font-style: italic;
+$list-subheader-bg-color: $body-bg;
+$list-subheader-font-size: $font-size-medium;
+$list-subheader-font-weight: 500;
+$list-subheader-letter-spacing: .3px;
+$list-subheader-color: $color-dark;
+$list-subheader-padding-y: $spacing-scale-4;
+
+// Tabs
+$tabs-nav-item-margins: $spacing-scale-3;
+$tabs-nav-button-padding-x: $spacing-scale-10;
+$tabs-nav-button-padding-y: $spacing-scale-8;
+$tabs-nav-button-icon-size: 2.4rem;
+$tabs-nav-button-stripe-height: 3px;
+$tabs-nav-active-color: $color-secondary;
+
+// Popovers
+$popover-font-size: $font-size-base;
+$popover-bg: #fff;
+$popover-max-width: none;
+$popover-border-width: 0;
+$popover-border-color: transparent;
+$popover-border-radius: $border-radius-sm;
+$popover-inner-border-radius: 0;
+$popover-box-shadow: $box-shadow;
+
+$popover-header-bg: darken($popover-bg, 3%);
+$popover-header-color: $headings-color;
+$popover-header-padding-y: .5rem;
+$popover-header-padding-x: .75rem;
+
+$popover-body-color: $body-color-dark;
+$popover-body-padding-y: $spacing-scale-10;
+$popover-body-padding-x: $spacing-scale-10;
+
+$popover-arrow-width: 2.4rem;
+$popover-arrow-height: 1.4rem;
+$popover-arrow-color: $popover-bg;
+
+$popover-arrow-outer-color: #888888;
+
+// Slider
+$slider-spacing: $spacing-scale-9;
+$slider-height: .6rem;
+$slider-bg-color: $color-primary;
+$slider-text-color: $body-color-dark;
+$slider-disabled-opacity: .4;
+$slider-rail-opacity: .3;
+$slider-thumb-size: $spacing-scale-7;

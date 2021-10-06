@@ -1,0 +1,138 @@
+// Override bootstap .btn
+
+.btn {
+	$this: &;
+
+	position: relative;
+	display: inline-flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: center;
+	background-color: $btn-bg-color;
+	color: $btn-color;
+	font-family: $btn-font-family;
+	font-size: $btn-font-size;
+	font-weight: $btn-font-weight;
+	letter-spacing: $btn-text-letter-spacing;
+	text-align: center;
+	padding: $btn-padding-y $btn-padding-x;
+	min-width: $btn-min-width;
+	border: $btn-border-width solid transparent;
+	border-radius: $btn-border-radius;
+	cursor: pointer;
+	transition: $btn-transition;
+
+	&:hover,
+	&:focus {
+		box-shadow: $btn-focus-box-shadow;
+	}
+
+	&:active {
+		box-shadow: none;
+	}
+
+	&:disabled {
+		opacity: $btn-disabled-opacity;
+		box-shadow: none;
+		cursor: auto;
+	}
+
+	&--truncate {
+		#{$this}__text {
+			@include text-truncate;
+		}
+	}
+
+	&-primary {
+		color: $btn-primary-color;
+		background-color: $btn-primary-bg-color;
+
+		&:not(:disabled) {
+			@include btn-hover($btn-primary-bg-color);
+		}
+	}
+
+	&-secondary {
+		color: $btn-secondary-color;
+		background-color: $btn-secondary-bg-color;
+
+		&:not(:disabled) {
+			@include btn-hover($btn-secondary-bg-color);
+		}
+	}
+
+	&-light {
+		color: $btn-light-color;
+		background-color: $btn-light-bg-color;
+
+		&:not(:disabled) {
+			@include btn-hover($btn-light-bg-color);
+		}
+	}
+
+	&-outline-light {
+		color: $btn-outline-light-color;
+		background-color: transparent;
+		border-color: $btn-outline-light-color;
+
+		&:not(:disabled) {
+			@include btn-hover;
+		}
+	}
+
+	&-outline-primary {
+		color: $btn-primary-bg-color;
+		border-color: $btn-primary-bg-color;
+
+		&:not(:disabled) {
+			@include btn-hover;
+		}
+	}
+
+	&-outline-secondary {
+		color: $btn-secondary-bg-color;
+		border-color: $btn-secondary-bg-color;
+
+		&:not(:disabled) {
+			@include btn-hover;
+		}
+	}
+
+	&-transparent {
+		color: $btn-light-color;
+		background-color: transparent;
+
+		&:not(:disabled) {
+			@include btn-hover;
+		}
+	}
+
+	&-lg {
+		padding: $btn-large-padding-y $btn-large-padding-x;
+		font-size: $btn-large-font-size;
+	}
+
+	&-link {
+		&,
+		&:link,
+		&:visited {
+			text-decoration: none;
+		}
+	}
+
+	&__icon {
+		fill: currentColor;
+	}
+
+	&__icon--right {
+		margin-left: $spacing-scale-5;
+	}
+
+	&__icon--left {
+		margin-right: $spacing-scale-5;
+	}
+
+	&__text {
+		display: block;
+	}
+}

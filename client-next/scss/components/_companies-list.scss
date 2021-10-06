@@ -1,0 +1,80 @@
+.companies-list {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: stretch;
+	align-items: stretch;
+	background-color: rgba(#fff, .9);
+	padding: $spacing-scale-7;
+	padding-top: 0;
+	height: 100%;
+	border-radius: .4rem;
+	overflow: auto;
+
+	&__header {
+		flex: none;
+		padding: $spacing-scale-7 0;
+	}
+
+	&__body {
+		flex: 1;
+	}
+
+	&__title {
+		font-size: 1.4rem;
+		margin: 0;
+		padding: 0;
+	}
+
+	&__item {
+		display: block;
+		background-color: #fff;
+		font-size: 1.4rem;
+		padding: $spacing-scale-7;
+		margin-bottom: $spacing-scale-5;
+		border: 1px solid $border-color;
+		border-radius: $border-radius-sm;
+		overflow: hidden;
+		cursor: pointer;
+		transition: all .15s;
+
+		&:hover:not(&--selected) {
+			background-color: lighten($color-secondary, 40%);
+			border-color: lighten($color-secondary, 40%);
+			border-radius: $border-radius-md;
+		}
+
+		&--selected {
+			background-color: $color-secondary;
+			border-color: $color-secondary;
+			color: #fff;
+			border-radius: $border-radius-md;
+		}
+
+		&--link {
+			&,
+			&:link,
+			&:visited {
+				text-decoration: none;
+			}
+		}
+	}
+
+	.company__name {
+		color: inherit;
+		font-size: inherit;
+		margin-bottom: $spacing-scale-1;
+	}
+
+	.company__stat {
+		margin-bottom: $spacing-scale-7;
+	}
+
+	.company__address {
+		font-size: inherit;
+		text-transform: uppercase;
+	}
+
+	.company__total-reviews {
+		font-size: inherit;
+	}
+}

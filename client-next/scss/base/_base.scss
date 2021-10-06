@@ -1,0 +1,58 @@
+*,
+*::after,
+*::before {
+	overflow-anchor: none;
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	height: 100vh;
+	-webkit-font-smoothing: antialiased;
+}
+
+html {
+	font-size: 62.5%;
+
+	@include media-breakpoint-down('xs') {
+		font-size: 56.25%;
+	}
+}
+
+body {
+	box-sizing: border-box;
+}
+
+#__next {
+	display: flex;
+	flex-flow: column nowrap;
+	min-height: 100%;
+}
+
+ul {
+	list-style: none;
+	margin-bottom: 0;
+}
+
+svg {
+	fill: currentColor;
+}
+
+a {
+	&,
+	&:link,
+	&:visited,
+	&:active {
+		text-decoration: underline;
+	}
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+strong {
+	font-weight: 500;
+}

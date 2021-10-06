@@ -1,0 +1,23 @@
+.custom-scrollbars-thumb {
+	background-color: #000;
+	opacity: .2;
+	border-radius: 5px;
+	z-index: 1;
+}
+
+.custom-scrollbars-track {
+	background-color: rgba(#000, .05);
+	border-radius: 5px;
+
+	&--vertical {
+		right: 2px;
+		bottom: 2px;
+		top: 2px;
+	}
+
+	&--horizontal {
+		right: 2px;
+		bottom: 2px;
+		left: 2px;
+	}
+}

@@ -1,0 +1,56 @@
+.icon-btn {
+	position: relative;
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: center;
+	background-color: $btn-light-bg-color;
+	color: $icon-color;
+	border: 0;
+	border-radius: $btn-border-radius;
+	width: $icon-btn-size;
+	height: $icon-btn-size;
+	transition: $btn-transition;
+
+	@include btn-hover($btn-light-bg-color);
+
+	&--plain {
+		width: auto;
+		height: auto;
+		background-color: transparent;
+
+		&::after {
+			content: "";
+			position: absolute;
+
+			$offset: -$spacing-scale-6;
+
+			top: $offset;
+			right: $offset;
+			bottom: $offset;
+			left: $offset;
+
+			background-color: rgba(#000, $btn-hover-transparent-opacity);
+			border-radius: $btn-border-radius;
+			opacity: 0;
+			transition: opacity .15s ease-out;
+			z-index: 0;
+		}
+
+		&:hover,
+		&:focus {
+			background-color: transparent;
+			&::after {
+				opacity: 1;
+			}
+		}
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	&__icon {
+		fill: currentColor;
+	}
+}

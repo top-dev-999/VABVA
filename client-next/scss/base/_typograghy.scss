@@ -1,0 +1,162 @@
+.paragraph {
+	font-size: $font-size-xmedium;
+	line-height: 1.6;
+	color: $color-dark;
+	margin-bottom: $spacing-scale-8;
+}
+
+.text-cursive {
+	font-style: italic;
+}
+
+.text-bold {
+	font-weight: 500;
+}
+
+.text-accent {
+	font-weight: 600;
+	color: $color-secondary-text;
+	// color: $color-primary-text;
+
+	letter-spacing: .4px;
+}
+
+.title {
+	&__num {
+		min-width: $font-size-xmedium;
+		color: $color-secondary-text;
+		margin-right: $spacing-scale-6;
+	}
+}
+
+.list-styled {
+	$this: &;
+
+	color: $color-dark;
+	font-size: $font-size-xmedium;
+	margin-bottom: $spacing-scale-8;
+
+	&--columns-2 {
+		column-count: 2;
+
+		@include media-breakpoint-down("xs") {
+			column-count: 1;
+		}
+	}
+
+	&--disc {
+		li {
+			@include list-item-disc($color-secondary-text, $spacing-scale-6);
+
+			&::before {
+				flex: none;
+			}
+		}
+	}
+
+	&--num {
+		counter-reset: list-counter;
+		li {
+			counter-increment: list-counter;
+
+			&::before {
+				display: inline-block;
+				content: counter(list-counter)". ";
+				color: $color-secondary-text;
+				font-weight: 500;
+				min-width: $font-size-xmedium;
+				margin-right: $spacing-scale-4;
+			}
+		}
+	}
+
+	&--links {
+		color: $color-primary-text;
+	}
+
+	li {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-start;
+		align-items: center;
+		padding: $spacing-scale-4 0;
+	}
+
+	&__icon {
+		margin-left: 0;
+		margin-right: 0;
+
+		&--left {
+			margin-right: $spacing-scale-6;
+		}
+	}
+}
+
+.card-list {
+	$this: &;
+	$list-grid-gap: $spacing-scale-6;
+
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+	align-items: stretch;
+	align-content: flex-start;
+
+	color: $color-dark;
+	font-size: $font-size-xmedium;
+	margin: 0 -$list-grid-gap;
+	margin-bottom: $spacing-scale-8;
+
+	&--columns-2 {
+		#{$this}__item {
+			flex: 0 1 50%;
+
+			@include media-breakpoint-down("md") {
+				flex: auto;
+				width: 100%;
+			}
+		}
+	}
+
+	&--images-3 {
+		#{$this}__item {
+			flex: 0 1 33%;
+
+			@include media-breakpoint-down("sm") {
+				flex: auto;
+				width: 100%;
+			}
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-flow: column nowrap;
+		padding: $list-grid-gap;
+	}
+
+	&__card {
+		flex: 1;
+		background-color: $color-secondary-lighten;
+		border: 1px solid $color-secondary-light;
+		border-radius: $border-radius-md;
+	}
+
+	&__card-image {
+		margin: 0 auto;
+	}
+
+	&__body {
+		padding: $list-grid-gap $spacing-scale-8;
+	}
+
+	&__header {
+		padding: $list-grid-gap $spacing-scale-8;
+		border-bottom: 1px solid $color-secondary-light;
+	}
+
+	&__title {
+		margin: 0;
+		color: $color-secondary-text;
+	}
+}

@@ -1,0 +1,124 @@
+.list {
+	$this: &;
+
+	display: block;
+	position: relative;
+	background-color: $list-bg-color;
+	padding: $list-padding-y $list-padding-x;
+	overflow: auto;
+
+	&__item {
+		$item-selector: &;
+		position: relative;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-start;
+		align-items: center;
+		width: 100%;
+		padding: $list-item-padding-y $list-item-padding-x;
+		border-radius: $border-radius-sm;
+		z-index: 0;
+
+		&--button {
+			cursor: pointer;
+			text-decoration: none;
+			@include disable-tap-highlight-color;
+
+			&:focus {
+				outline: none;
+			}
+
+			&:not(#{$item-selector}--disabled) {
+				&:hover {
+					background-color: $list-item-hover-bg-color;
+				}
+
+				&#{$item-selector}--highlighted {
+					background-color: $list-item-hover-bg-color;
+				}
+
+				&#{$item-selector}--selected,
+				&#{$item-selector}--focus-visible {
+					background-color: $list-item-focus-bg-color;
+				}
+			}
+
+			&,
+			&:link,
+			&:visited {
+				text-decoration: inherit;
+			}
+		}
+
+		&--disabled {
+			opacity: $list-item-disabled-opacity;
+			cursor: auto;
+		}
+	}
+
+	&__text {
+		color: $list-item-text-color;
+		padding: $list-item-text-padding-y $list-item-text-padding-x;
+
+		&:not(:last-child) {
+			margin-right: $list-item-padding-x;
+		}
+
+		&--truncate {
+			@include truncation;
+		}
+
+		&--flex {
+			flex: 1;
+		}
+
+		&--empty {
+			color: $list-item-empty-color;
+			font-style: $list-item-empty-font-style;
+		}
+	}
+
+	&__icon,
+	&__action {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: $icon-color;
+
+		&:not(:last-child) {
+			margin-right: $list-item-padding-x;
+		}
+	}
+
+	&__action {
+		.checkbox,
+		.btn-icon {
+			margin: 0;
+		}
+	}
+
+	&__subheader {
+		background-color: $list-subheader-bg-color;
+		font-size: $list-subheader-font-size;
+		font-weight: $list-subheader-font-weight;
+		letter-spacing: $list-subheader-letter-spacing;
+		color: $list-subheader-color;
+		padding: $list-subheader-padding-y $list-item-padding-x;
+		border-bottom: 1px solid $border-color;
+
+		&--sticky {
+			position: sticky;
+			top: 0;
+			z-index: 1;
+		}
+	}
+}
+
+.list-empty {
+	padding: $list-item-padding-y $list-item-padding-x;
+	font-size: $font-size-base;
+	font-weight: 500;
+	font-style: italic;
+	text-align: center;
+	margin: 0;
+}

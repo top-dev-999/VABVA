@@ -1,0 +1,108 @@
+// Override react-select classes
+
+.select-input {
+	width: 100%;
+
+	& &__control {
+		border-color: $input-border-color;
+		border-radius: $input-border-radius;
+		box-shadow: none;
+		transition: $input-transition;
+
+		&:hover {
+			border-color: $input-border-color;
+		}
+
+		&--is-focused {
+			border-color: $input-border-color;
+			box-shadow: $input-focus-box-shadow;
+		}
+	}
+
+	& &__value-container {
+		padding: $input-padding-y $input-padding-x;
+		cursor: text;
+
+		& > * {
+			padding: 0;
+			margin: 0;
+		}
+	}
+
+	& &__input {
+		color: inherit;
+	}
+
+	& &__placeholder {
+		color: $input-placeholder-color;
+		margin: 0;
+	}
+
+	& &__single-value {
+		color: inherit;
+		margin: 0;
+	}
+
+	& &__indicators {
+		padding: 0 $input-padding-x;
+	}
+
+	& &__loading-indicator {
+		width: auto;
+
+		&-spinner {
+			stroke: $input-adornment-color;
+		}
+	}
+
+	& &__dropdown-indicator {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		width: 2rem;
+		height: 100%;
+
+		&-icon {
+			color: $input-adornment-color;
+		}
+	}
+
+	& &__menu {
+		box-shadow: 0 2px 6px 0 rgba(#000, .12);
+		overflow: hidden;
+		z-index: 2;
+	}
+
+	& &__option {
+		cursor: pointer;
+
+		&--is-focused,
+		&--is-focused:active {
+			background-color: rgba(#000, .08);
+		}
+
+		&--is-selected {
+			background-color: $color-secondary-light;
+			color: inherit;
+
+			&:active {
+				background-color: darken($color-secondary-light, 10%);
+			}
+		}
+	}
+
+	& &__menu-notice,
+	& &__option {
+		padding: $spacing-scale-6 $spacing-scale-8;
+	}
+
+	&__unhighlight-text {
+		opacity: .6;
+	}
+
+	&__highlight-text {
+		opacity: 1;
+		background-color: transparent;
+		color: inherit;
+	}
+}

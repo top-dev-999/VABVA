@@ -1,0 +1,14 @@
+.main-menu-links {
+	&__link {
+		position: relative;
+		font-size: $font-size-xmedium;
+
+		&,
+		&:link,
+		&:visited,
+		&:hover,
+		&:active {
+			color: #fff;
+		}
+	}
+}

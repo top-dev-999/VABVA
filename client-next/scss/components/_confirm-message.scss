@@ -1,0 +1,31 @@
+.confirm-message {
+	display: flex;
+	flex-flow: column;
+	justify-content: flex-start;
+	align-items: center;
+	text-align: center;
+	max-width: 36rem;
+	margin: $spacing-scale-10 auto;
+
+	&__icon {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: center;
+		align-items: center;
+		background-color: $color-success;
+		color: #fff;
+		width: 10rem;
+		height: 10rem;
+		margin-bottom: $spacing-scale-14;
+		border-radius: 50%;
+	}
+
+	&__title {
+		margin-bottom: $spacing-scale-7;
+		text-transform: uppercase;
+	}
+
+	&__text {
+		margin-bottom: $spacing-scale-7;
+	}
+}

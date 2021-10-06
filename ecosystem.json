@@ -1,0 +1,33 @@
+{
+    "apps": [
+        {
+            "name": "vabva client",
+            "script": "npm",
+            "args": "run start:ui",
+            "env_production": {
+                "NODE_ENV": "production"
+            }
+        },
+        {
+            "name": "vabva server",
+            "script": "npm",
+            "args": "run start:server",
+            "env_production": {
+                "NODE_ENV": "production"
+            }
+        }
+    ],
+    "deploy": {
+        "production": {
+            "user": "ghost-user",
+            "host": [
+                "134.122.111.36"
+            ],
+            "ref": "origin/master",
+            "repo": "git@github.com:wisdomcsharp/GetSkip.git",
+            "path": "/var/workspace/vabva",
+            "key": "~/Desktop/clearplastic.pem",
+            "post-deploy": "npm install && pm2 reload ecosystem.json --env production"
+        }
+    }
+}

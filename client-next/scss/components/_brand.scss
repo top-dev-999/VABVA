@@ -1,0 +1,16 @@
+.brand {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: flex-start;
+
+	&--large {
+		&__name {
+			margin-left: $spacing-scale-5;
+		}
+	}
+
+	&__name {
+		margin-left: $spacing-scale-4;
+	}
+}

@@ -1,0 +1,42 @@
+.field-selected-list {
+	padding-top: $input-padding-y;
+	margin-bottom: -$spacing-scale-4;
+
+	&__item {
+		display: inline-flex;
+		justify-content: flex-start;
+		align-items: stretch;
+		background-color: $input-bg-color;
+		color: $input-color;
+		margin: 0 $spacing-scale-4 $spacing-scale-4 0;
+		border-radius: 10rem;
+	}
+
+	&__text {
+		font-size: $font-size-small;
+		padding: $spacing-scale-2 $spacing-scale-4;
+		padding-right: 0;
+		flex: 1;
+	}
+
+	&__btn {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: transparent;
+		color: inherit;
+		padding: 0 $spacing-scale-4;
+		flex: 0 1 auto;
+		border: 0;
+
+		&:hover {
+			background-color: rgba(#000, .08);
+		}
+
+		&-icon {
+			width: .8rem;
+			height: .8rem;
+			fill: currentColor;
+		}
+	}
+}

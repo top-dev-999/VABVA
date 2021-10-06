@@ -1,0 +1,150 @@
+.main-page {
+	&__header {
+		position: relative;
+		flex: 0 0 auto;
+		height: 80rem;
+		overflow: hidden;
+
+		&-bg-wrap {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			z-index: -1;
+
+			&::after {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				background-image: linear-gradient(to right, #000, transparent 50%, transparent);
+				background-size: cover;
+			}
+		}
+	}
+
+	&__subtitle {
+		color: $color-primary;
+		text-transform: uppercase;
+		font-size: 1.6rem;
+		font-weight: 400;
+		margin-bottom: 0;
+	}
+
+	&__title {
+		color: #000;
+		font-size: 4rem;
+		margin-bottom: $spacing-scale-3;
+		line-height: 1.2;
+	}
+
+	&__body {
+		padding: 12rem 0;
+		padding-bottom: 0;
+		flex: 1;
+
+		@include media-breakpoint-down('sm') {
+			padding: 5rem 0;
+			padding-bottom: 0;
+		}
+	}
+
+	&__banner-layout {
+		position: relative;
+		top: 35%;
+		transform: translateY(-35%);
+		overflow: hidden;
+	}
+
+	&__banner {
+		max-width: 46rem;
+		color: #fff;
+
+		&-title {
+			color: inherit;
+			font-size: 5rem;
+			line-height: 1.2;
+			margin-bottom: 0;
+		}
+
+		&-desc {
+			font-size: 2.4rem;
+			line-height: 1.5;
+			font-weight: 400;
+			margin-top: $spacing-scale-10;
+			opacity: .8;
+		}
+
+		&-btn {
+			margin-top: $spacing-scale-20;
+		}
+
+		@include media-breakpoint-down("xs") {
+			&-title {
+				font-size: 4.4rem;
+			}
+
+			&-desc {
+				font-size: 2rem;
+			}
+		}
+	}
+
+	&__landing-slide {
+		&--offset-right {
+			@include media-breakpoint-up("xxl") {
+				transform: translateX(-9.5rem);
+			}
+		}
+
+		&--offset-left {
+			@include media-breakpoint-up("xxl") {
+				transform: translateX(9.5rem);
+			}
+		}
+	}
+
+	&__filled-section {
+		padding: 12rem 0;
+
+		@include media-breakpoint-down('sm') {
+			padding: 5rem 0;
+		}
+
+		@include media-breakpoint-down('sm') {
+			padding: 5rem 0;
+		}
+
+		.landing-slide {
+			margin-bottom: 0;
+		}
+	}
+
+	&__news {
+		&-header {
+			display: flex;
+			flex-flow: column nowrap;
+			align-items: center;
+			max-width: 48rem;
+			margin: 0 auto;
+			text-align: center;
+		}
+
+		.main-page__title {
+			margin: 0;
+		}
+
+		&-list {
+			margin-top: 6.8rem;
+		}
+
+		&-all-btn {
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 6.8rem;
+		}
+	}
+}

@@ -1,0 +1,49 @@
+.company-page {
+	display: flex;
+	flex-flow: row wrap;
+
+	&__region {
+		&--center {
+			width: 65%;
+			flex: 1 65%;
+			background-color: #fff;
+			padding: 6.6rem;
+			border-radius: .4rem;
+
+			@include media-breakpoint-down('md') {
+				padding: 4rem;
+				width: auto;
+				flex: 1;
+			}
+
+			@include media-breakpoint-down('sm') {
+				background-color: transparent;
+				padding: 0;
+				padding-top: 4rem;
+				border-radius: 0;
+			}
+		}
+
+		&--aside {
+			width: 35%;
+			flex: 1 35%;
+			padding-right: $spacing-scale-20;
+
+			// To stop shrinking
+			@include media-breakpoint-down('md') {
+				width: 32rem;
+				flex: none;
+			}
+
+			@include media-breakpoint-down('sm') {
+				padding: 0;
+				margin-bottom: $spacing-scale-20;
+			}
+		}
+
+		@include media-breakpoint-down('sm') {
+			flex: none;
+			width: 100%;
+		}
+	}
+}

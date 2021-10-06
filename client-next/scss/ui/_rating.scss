@@ -1,0 +1,62 @@
+.rating {
+	display: inline-flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	line-height: 1;
+	margin: 0 -$spacing-scale-1;
+
+	&__item {
+		position: relative;
+		cursor: pointer;
+		@include disable-tap-highlight-color;
+
+		margin: 0 $spacing-scale-1;
+
+		&--disabled,
+		&--read-only {
+			cursor: inherit;
+		}
+
+		&--disabled {
+			opacity: $rating-disabled-opacity;
+		}
+
+		&--small {
+			width: $rating-size-small;
+			height: $rating-size-small;
+		}
+
+		&--medium {
+			width: $rating-size-medium;
+			height: $rating-size-medium;
+		}
+
+		&--large {
+			width: $rating-size-large;
+			height: $rating-size-large;
+		}
+	}
+
+	&__input,
+	&__icon {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		cursor: inherit;
+	}
+
+	&__input {
+		opacity: 0;
+	}
+
+	&__icon {
+		background-image: url('../assets/star-24.svg');
+		background-size: cover;
+
+		&--selected {
+			background-image: url('../assets/star-selected-24.svg');
+		}
+	}
+}

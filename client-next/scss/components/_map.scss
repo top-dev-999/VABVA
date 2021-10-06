@@ -1,0 +1,81 @@
+.map {
+	width: 100%;
+	height: 100%;
+
+	&__cluster {
+		$cluster: &;
+
+		position: absolute;
+		text-align: center;
+		transform: translate(-50%, -100%);
+		backface-visibility: hidden;
+		z-index: 1;
+		cursor: pointer;
+
+		& &-stroke {
+			transition: stroke-width .15s linear;
+		}
+
+		&:hover,
+		&:active,
+		&:focus {
+			z-index: 2;
+
+			#{$cluster}-stroke {
+				opacity: 1;
+				stroke-opacity: 1;
+				stroke: #fff;
+				stroke-width: 3px;
+				stroke-dasharray: 0 0;
+			}
+		}
+
+		// &-text {
+		// 	color: #fff;
+		// }
+	}
+
+	&__balloon {
+		position: absolute;
+		cursor: pointer;
+		transform-origin: bottom center;
+		backface-visibility: hidden;
+		transform: translate(-50%, -50%);
+		transition: transform .15s linear;
+		z-index: 1;
+
+		&:hover {
+			z-index: 2;
+			transform: translate(-50%, -50%) scale3d(1.4, 1.4, 1);
+		}
+
+		// & > :first-child {
+		// 	color: #fff;
+		// }
+
+		&--selected {
+			z-index: 3;
+		}
+	}
+
+	&__balloon-btn {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		border: 0;
+		background-color: transparent;
+	}
+
+	&__balloon-selected {
+		position: absolute;
+		top: 0;
+		left: 0;
+		color: $color-secondary;
+		fill: currentColor;
+		transform-origin: bottom center;
+		transform: translate(-50%, calc(-50% - 1rem));
+		cursor: pointer;
+		z-index: 2;
+	}
+}

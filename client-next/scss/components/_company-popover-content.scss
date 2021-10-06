@@ -1,0 +1,61 @@
+.company-popover-content {
+	position: relative;
+	width: 34rem;
+
+	@include media-breakpoint-down("xs") {
+		max-width: calc(100vw - #{$grid-gutter-width});
+	}
+
+	&__close-btn {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+
+	&.company {
+		font-size: 1.4rem;
+	}
+
+	.company__name {
+		font-size: inherit;
+		font-weight: 500;
+		padding-right: 4rem;
+		margin-bottom: $spacing-scale-3;
+	}
+
+	.company__stat {
+		margin-bottom: $spacing-scale-10;
+	}
+
+	.company__address {
+		font-size: inherit;
+		font-weight: 400;
+		text-transform: uppercase;
+		margin-bottom: $spacing-scale-10;
+	}
+
+	.company__review-link {
+		color: $color-secondary;
+		font-size: inherit;
+		font-weight: 500;
+		text-transform: uppercase;
+		padding: $spacing-scale-1 0;
+	}
+
+	.company__tags {
+		display: block;
+		margin: 0;
+		margin-top: $spacing-scale-8;
+		padding: 0;
+	}
+
+	.company__tag {
+		font-size: 1.3rem;
+		padding: .2rem 0;
+		margin: 0;
+	}
+
+	.company__tag-total {
+		font-weight: 500;
+	}
+}

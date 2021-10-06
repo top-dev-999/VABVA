@@ -1,0 +1,11 @@
+.filled-section {
+	padding: 4rem 0;
+
+	&--primary {
+		background-color: $color-primary-light;
+	}
+
+	&--secondary {
+		background-color: $color-secondary-light;
+	}
+}

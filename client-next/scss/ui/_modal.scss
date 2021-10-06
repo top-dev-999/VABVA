@@ -1,0 +1,41 @@
+.modal {
+	$this: &;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	z-index: $modal-z-index;
+
+	&__focus-trap {
+		@extend #{$this};
+	}
+
+	&--overflow {
+		overflow: auto;
+
+		#{$this}__focus-trap {
+			overflow: inherit;
+		}
+	}
+
+	&--hidden {
+		visibility: hidden;
+
+		#{$this}__focus-trap {
+			visibility: inherit;
+		}
+	}
+
+	&--centered {
+		align-items: center;
+
+		#{$this}__focus-trap {
+			align-items: inherit;
+		}
+	}
+}

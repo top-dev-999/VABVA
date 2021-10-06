@@ -1,0 +1,23 @@
+.footer {
+	background-color: $color-primary;
+	padding: $spacing-scale-18 0;
+
+	&__layout {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		@include media-breakpoint-down("xs") {
+			flex-flow: column nowrap;
+		}
+	}
+
+	&__social-net-list {
+		margin-left: $spacing-scale-10;
+
+		@include media-breakpoint-down("xs") {
+			margin: 0;
+			margin-top: 3rem;
+		}
+	}
+}

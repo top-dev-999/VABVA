@@ -1,0 +1,32 @@
+// override bootstrap popover
+
+.popover {
+	opacity: 0;
+	box-shadow: $popover-box-shadow;
+
+	.arrow {
+		margin: 0;
+	}
+
+	&.show {
+		opacity: 1;
+	}
+
+	&.fade {
+		transition: opacity .15s linear;
+	}
+
+	&--small {
+		box-shadow: $box-shadow-sm;
+
+		.popover-body {
+			padding: $spacing-scale-7;
+		}
+
+		.arrow {
+			bottom: -1rem;
+			width: 2rem;
+			height: 1rem;
+		}
+	}
+}

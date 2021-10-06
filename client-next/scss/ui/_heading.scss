@@ -1,0 +1,40 @@
+.heading {
+	display: block;
+	font-weight: $headings-font-weight;
+	line-height: $headings-line-height;
+	color: $headings-color;
+	margin-bottom: $headings-margin-bottom;
+
+	&--no-gutter-bottom {
+		margin-bottom: 0;
+	}
+
+	&--uppercase {
+		text-transform: uppercase;
+	}
+
+	&--size-1 {
+		font-size: $h1-font-size;
+	}
+
+	&--size-2 {
+		font-size: $h2-font-size;
+	}
+
+	&--size-3 {
+		font-size: $h3-font-size;
+	}
+
+	&--size-4 {
+		font-size: $h4-font-size;
+	}
+
+	&--size-5 {
+		font-size: $h5-font-size;
+	}
+
+	&--size-6 {
+		font-size: $h6-font-size;
+		font-weight: 500;
+	}
+}

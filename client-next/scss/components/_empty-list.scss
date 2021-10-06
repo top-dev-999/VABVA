@@ -1,0 +1,17 @@
+.empty-list {
+	padding: $spacing-scale-9 $spacing-scale-12;
+	background-color: #f5f5f5;
+	color: #6d788e;
+	border-radius: .2rem;
+
+	&__link {
+		border: 0;
+		background-color: transparent;
+		color: #4993c5;
+		text-decoration: underline;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}

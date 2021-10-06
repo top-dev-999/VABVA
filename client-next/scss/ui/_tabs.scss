@@ -1,0 +1,102 @@
+.tabs {
+	$this: &;
+
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: flex-start;
+
+	&__nav {
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-start;
+		align-items: center;
+		overflow: hidden;
+	}
+
+	&__nav-item {
+		display: block;
+		position: relative;
+		margin-left: $tabs-nav-item-margins;
+
+		&:last-child {
+			margin-right: $tabs-nav-item-margins;
+		}
+	}
+
+	&__nav-button {
+		display: block;
+		position: relative;
+		text-align: center;
+		background-color: transparent;
+		padding: $tabs-nav-button-padding-y $tabs-nav-button-padding-x;
+		border: 0;
+		width: 100%;
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			margin: $tabs-nav-item-margins 0;
+			border-radius: $border-radius-lg;
+			transition: background-color .15s;
+			z-index: 1;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			display: block;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: $tabs-nav-button-stripe-height;
+			background-color: $tabs-nav-active-color;
+			transform-origin: center;
+			transform: scale3d(0, 1, 1);
+			transition: transform .15s;
+			z-index: 2;
+		}
+
+		&:hover {
+			&::after {
+				background-color: rgba(#000, .05);
+			}
+		}
+
+		&.active {
+			&::before {
+				transform: scale3d(1, 1, 1);
+			}
+
+			#{$this}__nav-icon {
+				color: $tabs-nav-active-color;
+			}
+		}
+	}
+
+	&__nav-icon-wrap {
+		display: block;
+		color: $icon-color;
+		width: $tabs-nav-button-icon-size;
+		height: $tabs-nav-button-icon-size;
+		margin: 0 auto;
+	}
+
+	&__nav-icon {
+		display: block;
+		color: $icon-color;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__pane {
+		height: 100%;
+
+		&:not(.active) {
+			display: none;
+		}
+	}
+}

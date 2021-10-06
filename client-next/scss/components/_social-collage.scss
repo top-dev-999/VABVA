@@ -1,0 +1,49 @@
+.social-collage {
+	position: relative;
+	display: block;
+	max-width: 60rem;
+	height: 54rem;
+	margin: 0 auto;
+
+	&__item {
+		position: absolute;
+		line-height: 0;
+
+		@include media-breakpoint-up("xl") {
+			margin-left: 2.5rem;
+		}
+
+		& > * {
+			border-radius: 2rem;
+			box-shadow: 0 0 0 1rem $body-bg;
+		}
+	}
+
+	&__item--p1 {
+		top: 2.5rem;
+		max-width: 50%;
+		left: 0;
+		z-index: 1;
+	}
+
+	&__item--p2 {
+		top: 35%;
+		left: 43%;
+		max-width: 50%;
+		z-index: 2;
+	}
+
+	&__item--p3 {
+		top: 0rem;
+		left: 52%;
+		max-width: 44%;
+		z-index: 3;
+	}
+
+	&__item--p4 {
+		top: 62%;
+		left: 0;
+		max-width: 44%;
+		z-index: 1;
+	}
+}

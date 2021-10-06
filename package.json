@@ -1,0 +1,40 @@
+{
+    "name": "vabva",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+        "start:server": "NODE_ENV=production node app.js",
+        "start:ui": "cd client-next && npm install && npm run build && npm run start",
+        "build": "cd client-next && npm run build",
+        "dev": "nodemon app.js",
+        "__start:production": "concurrently \"npm run start:server\" \"npm i && NODE_ENV=production npm run start\"",
+        "__heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    },
+    "nodemonConfig": {
+        "ignore": [
+            "client-next/*"
+        ]
+    },
+    "dependencies": {
+        "@sendgrid/mail": "^7.4.0",
+        "aws-sdk": "^2.821.0",
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "hbs": "^4.1.1",
+        "http-status-codes": "^2.1.4",
+        "jsonwebtoken": "^8.5.1",
+        "mailgun-js": "^0.22.0",
+        "mongoose": "^5.12.2",
+        "nodemon": "^2.0.6",
+        "prerender": "^5.8.0",
+        "prerender-node": "^3.2.5",
+        "react-rating": "^2.0.5",
+        "react-virtualized-auto-sizer": "^1.0.5",
+        "react-window": "^1.8.6",
+        "redis": "^3.0.2",
+        "string-to-color": "^2.2.2"
+    }
+}

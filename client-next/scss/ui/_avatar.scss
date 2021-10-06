@@ -1,0 +1,25 @@
+.avatar {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: center;
+	font-size: $avatar-text-font-size;
+	font-weight: $avatar-text-font-weight;
+	color: $avatar-text-color;
+	background-color: $avatar-bg-color;
+	width: $avatar-size;
+	height: $avatar-size;
+	border-radius: 50%;
+
+	&--size-large {
+		width: $avatar-large-size;
+		height: $avatar-large-size;
+		font-size: $avatar-large-text-font-size;
+	}
+
+	&--size-small {
+		width: $avatar-small-size;
+		height: $avatar-small-size;
+		font-size: $avatar-small-text-font-size;
+	}
+}
